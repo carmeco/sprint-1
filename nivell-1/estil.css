@@ -18,66 +18,44 @@ div, li, section {
     height: 20px;
 }
 
-nav ul {
-    display: flex;
+nav, .nav-container, article, aside {
+    padding: 15px;
+}
+
+nav, article, li {
+    margin-bottom: 15px;
+}
+
+nav li:last-child, aside li:last-child {
+    margin-bottom: 0;
+}
+
+nav {
     background-color: #2d4059;
-    padding: 15px;
-    margin-bottom: 10px;
 }
 
 nav li {
     background-color: #ea5455;
 }
 
-.nav-left {
-    width: 20%;
-}
-
-.nav-center {
-    width: 60%;
-    margin: 0 15px
-}
-
-.nav-right {
-   width: 20%;
-}
-
-.container {
+.nav-container {
     background-color: #f07b3f;
-    padding: 15px;
 }
 
-.item {
+.nav-item {
     background-color: #fed460;
-}
-
-nav li {
-    background-color: #ea5455;
 }
 
 main {
     background-color: #feff03;
-
 }
 
 article {
-    padding: 15px;
-    margin-bottom: 15px;
     background-color: #4e4e6a;
 }
 
-article ul {
-    display: flex;
-    margin-bottom: 15px;
-}
-
 article li {
-    width: 50%;
-    background-color: #1f6cb0;
-}
-
-article li:first-child {
-    margin-right: 15px;
+    background-color: #62959c;
 }
 
 section {
@@ -86,19 +64,52 @@ section {
 
 aside {
     background-color: #f73f52;
-    padding: 15px;
 }
 
 aside li {
-    background-color: #feea85;
-    margin-bottom: 15px;
+    background-color: #fdb36b;
 }
 
 footer div{
     background-color: #e6af2e;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {
+    nav {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        display: flex;
+    }
+    nav li {
+        margin-bottom: 0;
+    }
+    .nav-left {
+        width: 20%;
+    }
+    .nav-center {
+        width: 60%;
+        margin: 0 15px
+    }
+    .nav-right {
+       width: 20%;
+    }
+    article ul {
+        display: flex;
+    }  
+    article li {
+        width: 50%;
+        background-color: #1f6cb0;
+    } 
+    article li:first-child {
+        margin-right: 15px;
+    } 
+    aside li {
+        background-color:#feea85;
+    }   
+}
+
+@media only screen and (min-width: 992px) {
     main {
         display: flex;
         background-color: black;
