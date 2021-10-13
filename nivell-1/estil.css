@@ -56,14 +56,14 @@ nav li {
 }
 
 main {
-    display: flex;
+    background-color: #feff03;
+
 }
 
 article {
-    width: 70%;
-    background-color: #4e4e6a;
     padding: 15px;
-    margin-right: 15px;
+    margin-bottom: 15px;
+    background-color: #4e4e6a;
 }
 
 article ul {
@@ -85,7 +85,6 @@ section {
 }
 
 aside {
-    width: 30%;
     background-color: #f73f52;
     padding: 15px;
 }
@@ -99,4 +98,17 @@ footer div{
     background-color: #e6af2e;
 }
 
-
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+        background-color: black;
+    }
+    article {
+        width: 70%;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+    aside {
+        width: 30%;
+    }
+}
