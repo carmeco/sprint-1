@@ -74,7 +74,7 @@ footer div{
     background-color: #e6af2e;
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 481px) {
     nav {
         margin-bottom: 10px;
     }
@@ -109,7 +109,7 @@ footer div{
     }   
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
     main {
         display: flex;
         background-color: black;
