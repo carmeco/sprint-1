@@ -2,18 +2,28 @@
     --white: #f5f1f1;
     --black: #1d1d1d;
     --pink: #f08080;
-    --light-grey: #d8d7d7;
-    --dark-grey: #808080;
+    --yellow: #eee48b;
+    --light-grey: #d7d7d7;
+    --medium-grey: #808080;
+    --dark-grey: #5f5f5f;
 }
 
-* {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    background-image: url("images/header.jpg");
-    background-position: center;
-    background-size: cover;
+h1 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--medium-grey);
+}
+a:hover {
+    color: var(--pink);
 }
 
 .container {
@@ -21,76 +31,146 @@ header {
     margin: auto;
 }
 
+
+/* Estils header */
+
+header {
+    background-image: url("images/header.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
 nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.logo{
-    width: 100px;
+    row-gap: 1rem;
 }
 
 nav ul {
     display: flex;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-nav li {
-    margin-left: 20px;
-}
-nav li:first-child {
-    margin-left: 0;
-}
-nav a {
-    text-decoration: none;
-    color: var(--dark-grey);
-}
 
 .main-nav {
-    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 0;
 }
 .main-nav svg {
-    margin-right: 5px;
+    margin-right: 0.5rem;
 }
 
 .header-text {
     background-color: rgba(0,0,0,0.1);
-    margin-top: 100px;
-}
-.header-text h1{
     color: #f08080;
     text-align: center;
+    margin-top: 100px;
     padding: 40px 0 60px;
-    font-weight: 400;
-    font-size: 25px
+}
+
+
+/* Estils article */
+
+article {
+    background-color: var(--light-grey);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+section {
+    background-color: var(--white);
+    flex-grow: 1;
+    width: 300px;
+    padding: 0.5rem;
+}
+
+.card-header {
+    position: relative;
+}
+.card-header img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.card-header h4{
+    position: absolute;
+    bottom: -0.5rem;
+    left: 1rem;
+    color: var(--yellow);
+}
+
+.card-title {
+    background-color: var(--pink);
+    padding: 1rem 1rem 0;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.card-description {
+    padding: 0.5rem;
+}
+
+.card-description p {
+    color: var(--dark-grey);
+    column-count: 2;
+}
+
+article > div {
+    text-align: center;
+}
+
+
+/* Estils aside */
+
+aside {
+    background-color: var(--light-grey);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estils footer */
+
+footer {
+    text-align: center;
+    color: var(--dark-grey);
+    padding: 0.5rem;
+    margin-top: 1rem;
 }
 
 
 @media only screen and (min-width: 481px) {
+    h1{
+        font-size: 2rem;
+    }
     nav {
         flex-direction: row;
+        column-gap: 2rem;
         justify-content: space-between;
     }
-    .main-nav {
-        margin: 20px 40px
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
 }
+
 
 @media only screen and (min-width: 768px) {
     .main-nav {
         width: 60%;
         justify-content: space-between;
     }
-    nav a:hover {
-        color: var(--pink);
+    main {
+        display: flex;
+        column-gap: 1rem;
     }
-    
+    article {
+        width: 70%;
+    }
+    aside {
+        width: 30%;
+    }
 }
