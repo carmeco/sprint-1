@@ -1,0 +1,216 @@
+:root {
+    --white: #f5f1f1;
+    --black: #1d1d1d;
+    --pink: #f08080;
+    --yellow: #eee48b;
+    --light-grey: #d7d7d7;
+    --medium-grey: #808080;
+    --dark-grey: #5f5f5f;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--medium-grey);
+}
+a:hover {
+    color: var(--pink);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Estils header */
+
+header {
+    background-image: url("images/header.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.logo {
+    animation: rotate 2s ease;
+}
+
+nav ul {
+    display: flex;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-nav svg {
+    margin-right: 0.5rem;
+}
+
+.header-text {
+    background-color: rgba(0,0,0,0.1);
+    color: #f08080;
+    text-align: center;
+    margin-top: 100px;
+    padding: 40px 0 60px;
+    animation: fadeIn 2s ease-out;
+}
+
+
+/* Estils article */
+
+article {
+    background-color: var(--light-grey);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+section {
+    background-color: var(--white);
+    flex-grow: 1;
+    width: 300px;
+    padding: 0.5rem;
+    animation: 2s fadeInFromDown  ease-out;
+}
+
+section:hover{
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.card-header {
+    position: relative;
+}
+.card-header img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.card-header h4{
+    position: absolute;
+    bottom: -0.5rem;
+    left: 1rem;
+    color: var(--yellow);
+}
+
+.card-title {
+    background-color: var(--pink);
+    padding: 1rem 1rem 0;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.card-description {
+    padding: 0.5rem;
+}
+
+.card-description p {
+    color: var(--dark-grey);
+    column-count: 2;
+}
+
+article > div {
+    text-align: center;
+}
+
+
+/* Estils aside */
+
+aside {
+    background-color: var(--light-grey);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estils footer */
+
+footer {
+    text-align: center;
+    color: var(--dark-grey);
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+@media only screen and (min-width: 481px) {
+    h1{
+        font-size: 2rem;
+    }
+    nav {
+        flex-direction: row;
+        column-gap: 2rem;
+        justify-content: space-between;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .main-nav {
+        width: 60%;
+        justify-content: space-between;
+    }
+    main {
+        display: flex;
+        column-gap: 1rem;
+    }
+    article {
+        width: 70%;
+    }
+    aside {
+        width: 30%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromDown {
+    from {
+        transform: translateY(500px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
